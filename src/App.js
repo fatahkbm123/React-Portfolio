@@ -24,12 +24,17 @@ import "./App.css";
 
 // export default App;
 
-import PersistentDrawerLeft from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+// import { GlobalProvider } from "./Context";
 
-export default function App() {
+function App() {
   return (
     <>
-      <PersistentDrawerLeft />;
+      <Navbar />
+      <Home />
     </>
   );
 }
+
+export default App;

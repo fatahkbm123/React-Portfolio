@@ -11,17 +11,20 @@ import useStyles from "../../StyleComponent";
 import DrawerComponent from "./Sub/Drawer";
 
 import PopoverIcons from "./Sub/Popover";
+// import { GlobalConsumer } from "../../Context";
 
-export default function PersistentDrawerLeft() {
+function Navbar(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
+    document.body.classList.add("active");
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
+    document.body.classList.remove("active");
   };
 
   return (
@@ -53,14 +56,8 @@ export default function PersistentDrawerLeft() {
       </AppBar>
 
       <DrawerComponent open={open} handleDrawerClose={handleDrawerClose} />
-
-      {/* <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />
-      </main> */}
     </div>
   );
 }
+
+export default Navbar;

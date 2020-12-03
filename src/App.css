@@ -1,6 +1,59 @@
 body {
-  font-family: "Roboto", sans-serif;
+  background: rgb(34, 34, 34) !important;
+  /* font-family: "Roboto", sans-serif; */
+  transition: all 0.3s ease-in-out;
 }
+
+body.active {
+  background-color: rgb(24, 24, 24) !important;
+}
+
+.Home {
+  position: relative;
+  margin-top: 100px;
+}
+
+.Home .name {
+  margin-top: 5px;
+  font-family: "Montserrat";
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 3px black;
+  margin-left: -5px;
+}
+
+.Home .name::after {
+  content: "";
+  margin-left: 5px;
+  display: block;
+  background-color: black;
+  width: 30%;
+  height: 3px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.particle {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+  visibility: visible;
+  opacity: 0.3;
+}
+
+@media (max-width: 600px) {
+  .particle {
+    top: 100px;
+  }
+
+  .Home .name {
+    font-size: 3.5rem;
+  }
+}
+
 /* 
 .App {
   text-align: center;

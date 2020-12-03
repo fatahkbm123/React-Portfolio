@@ -5,8 +5,9 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    flexGrow: 1,
+    // flexGrow: 1,
   },
+
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -14,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     }),
     background: "#333333",
   },
+
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
@@ -46,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
   },
   content: {
-    boxShadow: "0 0 5px black",
     marginLeft: -drawerWidth,
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -85,12 +86,36 @@ const useStyles = makeStyles((theme) => ({
   popover: {
     pointerEvents: "none",
   },
+
   paper: {
     padding: "5px 8px",
   },
 
   fontPopover: {
     fontSize: 12,
+  },
+
+  Home: {
+    padding: "0 60px",
+  },
+
+  homeParticle: {
+    width: "100%",
+    position: "relative",
+  },
+
+  font1: {
+    fontFamily: "Montserrat",
+    fontSize: 25,
+  },
+
+  font3: {
+    "@media(max-width: 600px)": {
+      fontSize: "1.5rem",
+    },
+    fontFamily: "Montserrat",
+    fontSize: "2.1rem",
+    marginTop: "20px",
   },
 }));
 
